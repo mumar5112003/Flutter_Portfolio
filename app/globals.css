@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vh: 1vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    /* Prevent mobile browser address bar from affecting layout */
+    height: -webkit-fill-available;
+    /* Prevent layout shift */
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-dark-bg text-dark-text antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    /* Use custom viewport height to prevent address bar issues */
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
+    /* Prevent pull-to-refresh on mobile */
+    overscroll-behavior-y: contain;
+    /* Fix for iOS Safari */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent layout shift on load */
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Fix for fixed navbar on mobile - prevent shifting */
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    /* Prevent navbar from shifting on mobile scroll */
+    contain: layout style paint;
+    /* Prevent any movement */
+    margin: 0 !important;
+    padding-top: 0 !important;
+    /* Force stay at top */
+    inset-block-start: 0 !important;
+  }
+  
+  nav[class*="fixed"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  /* Additional mobile fixes - aggressive locking */
+  @media (max-width: 768px) {
+    nav,
+    nav[class*="fixed"] {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      /* Use env() for safe area on iOS */
+      padding-top: env(safe-area-inset-top, 0) !important;
+      /* Force hardware acceleration and lock position */
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      /* Prevent any layout shifts */
+      will-change: auto !important;
+      /* Ensure it's always on top */
+      z-index: 9999 !important;
+      /* Lock all positions */
+      margin: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      /* Prevent any animation from moving it */
+      animation: none !important;
+      transition: background-color 0.3s, box-shadow 0.3s !important;
+    }
+    
+    /* Override any Framer Motion transforms on mobile */
+    nav[style*="transform"],
+    nav[style*="y"] {
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      top: 0 !important;
+    }
+    
+    /* Prevent body from shifting navbar on scroll */
+    body {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    
+    /* Prevent initial flash */
+    main {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-highlight;
+  }
+  
+  .glass-effect {
+    @apply bg-dark-surface/80 backdrop-blur-lg border border-dark-border;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent-primary/20;
+  }
+}

@@ -1,0 +1,33 @@
+MUHAMMAD UMAR
+Ó (092) 340-2039360 ⋄ ½ Lahore, Pakistan
+R mumar5112003@gmail.com ⋄ ° LinkedIn: mumar5112003
+OBJECTIVE
+Flutter Developer with 2+ years’ experience delivering scalable cross-platform apps. Skilled in Dart, Flutter, REST
+API integration, and app deployment. Eager to contribute to a growth-oriented team.
+EDUCATION
+BS Computer Science, COMSATS University, Lahore Sep 2021 – Jul 2025
+CGPA: 3.20/4.00
+SKILLS
+Languages Dart, JavaScript, PHP, Java
+Mobile Flutter, App Store & Play Store Deployment
+State Management GetX, BLoC, Provider, Riverpod
+Backend Laravel, Node.js, Prisma, REST APIs
+Database Firebase, MongoDB, MySQL
+Tools Git, Postman, Figma, Docker (basic)
+EXPERIENCE
+Associate Software Engineer – PSBA (Punjab Sahulat Bazaar Authority) Jul 2025 – Present
+• Managing and maintaining PSBA’s Flutter + Laravel Home Delivery App on App Store and Play Store.
+• Collaborating on development of a full HR Payroll Management System using React, Node.js, and Prisma.
+App Transition Consultant – PSBA Mar 2025 – Jun 2025
+• Migrated and re-launched existing Home Delivery App with backend integration and store deployments.
+Freelance Flutter Developer (Fiverr) Oct 2022 – Present
+• Delivered 15+ client projects involving UI building, template customization, and third-party API integration.
+PROJECTS
+Bedri Kurye – Parcel Delivery App (Flutter + Laravel)
+• Multi-drop delivery app with Google Maps tracking and PayTR payment integration.
+Crop Disease Detection App (FYP)
+• ML-based Flutter app with Urdu voice interaction (TTS/STT) for crop diagnosis.
+EasyLoade & eGold – Fintech Features
+• Real-time wallet and trading features, developed from Figma UI designs.
+Codecanyon App Customizations
+• Firebase setup, reskinning, push notifications, and Google Maps integrations for various templates.
